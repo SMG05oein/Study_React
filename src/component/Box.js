@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Box = ({ count }) => {
+const Box = (props) => {
+  console.log(props)
   return (
     <div className="box">
-      리엑트{count}<br></br>
-      오 개신기해!!<br></br>
+      리엑트{props.count}<br></br>
+      {props.content != null ? props.content : "오 개신기해!!"}<br></br>
     </div>
   )
 }
