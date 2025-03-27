@@ -5,7 +5,9 @@ function App() {
   let i = 1;
   return (
     <div>
-      
+      <Box count = {i++}/>
+      <Box count = {i++}/>
+      <Box count = {i++}/>
       <Box count = {i++}/>
       <Box count = {i++}/>
       <Box count = {i++}/>
