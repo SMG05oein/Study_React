@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Box from "./component/Box";
 
 function App() {
+  let i = 1;
   return (
     <div>
-      <div className="box">
-      리엑트1<br></br>
-      오 개신기해!!<br></br>
-      </div>
-
-      <div className="box">
-      리엑트2<br></br>
-      오 개신기해!!<br></br>
-      </div>
-
-      <div className="box">
-      리엑트3<br></br>
-      오 개신기해!!<br></br>
-      </div>
+      
+      <Box count = {i++}/>
+      <Box count = {i++}/>
+      <Box count = {i++}/>
     </div>
   );
 }
