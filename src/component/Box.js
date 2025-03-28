@@ -1,11 +1,13 @@
+//rafce
+// import './App.css'; //이건 왜 안 하는거야?
 import React from 'react'
 
 const Box = (props) => {
-  console.log(props)
   return (
     <div className="box">
-      리엑트{props.count}<br></br>
-      {props.content != null ? props.content : "오 개신기해!!"}<br></br>
+      <h1>{props.title != null ? props.title : "나"}</h1>
+      <img className='item-img' src="https://cdn.imweb.me/thumbnail/20200515/f5f09c900eed0.png"/>
+      <h2 >승!</h2>
     </div>
   )
 }
