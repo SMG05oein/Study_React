@@ -7,7 +7,7 @@ const Box = (props) => {
     <div className="box">
       <h1>{props.title != null ? props.title : "나"}</h1>
       <img className='item-img' src={props.item && props.item.img}/>
-      <h2 >승!</h2>
+      <h2 >{props.result}</h2>
     </div>
   )
 }
