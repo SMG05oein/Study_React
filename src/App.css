@@ -1,7 +1,21 @@
-.box{
-    border:1px solid black;
-    width:500px;
+.box {
+    border: 3px solid black;
+    width: 500px;
+    text-align: center;
+    margin: 3px;
 
+}
+
+.box.win {
+    border-color: blue;
+}
+
+.box.lose {
+    border-color: red;
+}
+
+.box.tie {
+    border-color: black;
 }
 
 .item-img{
@@ -17,4 +31,24 @@
 .btn{
     display: flex;
     justify-content: center;
+
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    border: none;
+}
+
+.win{
+    /* border:3px solid blue; */
+    color: blue;
+}
+
+.lose{
+    /* border:3px solid red; */
+    color: red;
+}
+
+.tie{
+    /* border:3px solid black; */
+    color: black;
 }

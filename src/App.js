@@ -29,6 +29,7 @@ function App() {
     let computerChoice = randomChoice();
     setComputerChoice(choice[computerChoice]); //choice 객체에 computerChoice를 넣어서 키값으로 가져옴
     setResult(judgement(choice[userChoice], choice[computerChoice]));
+    // console.log(result);
   };
 
   const randomChoice = () => {
@@ -43,19 +44,19 @@ function App() {
 
   const judgement = (user, computer) => {
     if (user.name === computer.name) {
-      return "비겼습니다";
+      return ["비겼습니다", "tie", "비겼습니다", "tie"];
     } else if (user.name === "가위" && computer.name === "보" || user.name === "바위" && computer.name === "가위" ||user.name === "보" && computer.name === "바위") {
-      return "이겼습니다";
+      return ["이겼습니다", "win", "졌습니다", "lose"];
     } else {
-      return "졌습니다";
+      return ["졌습니다", "lose", "이겼습니다", "win"];
     }
   };
 
   return (
     <div>
-      <div className="main" > 
-      <Box item={userChoice} result={result}/>
-      <Box title="컴퓨터" item={computerChoice} result={result}/>
+      <div className="main"> 
+      <Box item={userChoice} result={result[0]} whatisit={result[1]} />
+      <Box title="컴퓨터" item={computerChoice} result={result[2]} whatisit={result[3]} />
       </div>
 
       <div className="btn">
